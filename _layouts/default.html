@@ -4,17 +4,28 @@
   {% include head.html %}
 
   <body>
+    <div class="container">
+      {% include header.html %}
 
-    {% include header.html %}
+      <div class="row main-data">
+        <div class="col-sm-12 col-md-8">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-4">
+          {% include footer.html %}
+        </div>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+        <footer class="text-xs-center credit">
+          &copy; 2015. Rahadian Yusuf.
+        </footer>
       </div>
     </div>
 
-    {% include footer.html %}
-
+    <!-- SCRIPT HERE -->
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
   </body>
 
 </html>

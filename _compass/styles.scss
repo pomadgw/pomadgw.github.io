@@ -8,3 +8,34 @@
 // @import "bootstrap-grid";
 // or Import Bootstrap Reboot
 // @import "bootstrap-reboot";
+@import "syntax";
+
+
+.main-data {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.footer-heading {
+    font-family: $font-family-monospace;
+}
+
+.credit {
+    width: 100%;
+    margin: 1em auto;
+}
+
+.icon {
+    &> svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+#search_results {
+    padding: 0;
+    &> li {
+        display: block;
+        margin: 1em 0;
+    }
+}
