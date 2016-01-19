@@ -5,11 +5,22 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    <a href="/{{ page.date | date: "%Y" }}/{{ page.date | date: "%m" }}/{{ page.date | date: "%-d" }}/">{{ page.date | date: "%-d" }}</a>
+    <a href="/{{ page.date | date: "%Y" }}/{{ page.date | date: "%m" }}">{{ page.date | date: "%B" }}</a>
+    <a href="/{{ page.date | date: "%Y" }}/">{{ page.date | date: "%Y" }}</a>
+    </time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+  </div>
+
+  <div>
+  	In
+	{% for cat in page.categories %}
+		<a class="tag" href="{{"/category" | prepend: site.baseurl }}/{{cat}}">{{cat}}</a>
+	{% endfor %}
   </div>
 
 </article>

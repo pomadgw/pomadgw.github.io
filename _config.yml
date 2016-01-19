@@ -14,15 +14,29 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pomadgw.github.com" # the base hostname & protocol for your site
 twitter_username: RianYusuf94
 github_username:  pomadgw
+timezone: Asia/Jakarta
 
 # Build settings
 markdown: kramdown
 gems:
 - jekyll-compass
 - jekyll-paginate
+- jekyll-archives
+
+permalink: :year/:month/:day/:title.html
 
 exclude: ['bin', 'vendor']
 
 paginate: 10
 
 paginate_path: "/blog/page/:num/"
+
+jekyll-archives:
+  enabled: 'all'
+  layout: 'archives'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'

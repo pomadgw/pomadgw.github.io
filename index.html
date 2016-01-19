@@ -8,8 +8,8 @@ layout: default
 
   <div class="post-list row">
     {% for post in paginator.posts %}
-      <div class="col-sm-12 col-md-3">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="col-sm-12 col-md-3 text-xs-right">
+        <span class="post-meta">Posted on<br>{{ post.date | date: "%b %-d, %Y" }}</span>
       </div>
       <div class="col-sm-12 col-md-9">
         <h2>
@@ -63,6 +63,6 @@ layout: default
     </ul>
   </nav>
   {% endif %}
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">If you want, subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

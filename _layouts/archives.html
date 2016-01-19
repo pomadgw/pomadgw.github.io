@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">
+  {% if page.type == 'category' %}
+  Archive of posts with {{ page.type }} '{{ page.title }}'
+  {% elsif page.type == 'date' %}
+  Archive of posts from {{ page.date | date: "%Y" }}
+  {% elsif page.type == 'month' %}
+  Archive of posts from {{ page.date | date: "%B %Y" }}
+  {% elsif page.type == 'day' %}
+  Archive of posts from {{ page.date | date: "%-d %B %Y" }}
+  {% endif %}
+  </h1>
+
+  <div class="post-list row">
+    {% for post in page.posts %}
+      <div class="col-sm-12 col-md-3 text-xs-right">
+        <span class="post-meta">Posted on<br>{{ post.date | date: "%b %-d, %Y" }}</span>
+      </div>
+      <div class="col-sm-12 col-md-9">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+
+        <div>
+          <p>
+            {{ post.excerpt | remove: '<p>' | remove: '</p>' }} ...
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <p class="rss-subscribe">If you want, subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

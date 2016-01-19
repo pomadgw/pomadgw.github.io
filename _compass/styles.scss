@@ -10,7 +10,6 @@
 // @import "bootstrap-reboot";
 @import "syntax";
 
-
 .main-data {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -37,5 +36,21 @@
     &> li {
         display: block;
         margin: 1em 0;
+    }
+}
+
+.tag {
+    &, &:visited {
+        margin: 0;
+        // border-top: none;
+        // border-bottom: 3px solid #888;
+        padding: 0.1rem 0.5rem;
+        background-color: #ddd;
+        color: #333;
+    }
+
+    &:hover {
+        text-decoration: none;
+        border-bottom: 3px solid #888;
     }
 }
