@@ -57,6 +57,11 @@ h2 {
     margin: 0.1rem 0;
 }
 
+.post-header {
+    width: 30rem;
+    margin: auto;
+}
+
 p {
     text-align: justify;
     text-justify: inter-word;
@@ -83,7 +88,7 @@ blockquote {
     padding-right: 2rem;
     position: relative;
 
-    p {
+    &> p {
         &:before {
             content: '“';
         }
@@ -92,7 +97,7 @@ blockquote {
         }
     }
     
-    footer {
+    footer p {
         color: $gray-light;
         font-size: 0.8em;        
         a {

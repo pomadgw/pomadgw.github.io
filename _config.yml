@@ -25,7 +25,12 @@ gems:
 
 permalink: :year/:month/:day/:title.html
 
+excerpt_separator: '<!-- more -->'
+
 exclude: ['bin', 'vendor']
+
+# sass:
+    # style: compressed
 
 paginate: 10
 

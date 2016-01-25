@@ -1,10 +1,13 @@
----
 require:
-- jekyll-compass
 - bootstrap
-project_path: "/home/rahadian.yusuf/src/fromgit/pomadgw.github.io/."
+project_path: "/home/rahadian.yusuf/src/fromgit/pomadgw.github.io/"
 http_path: "/"
 css_dir: css
 sass_dir: _compass
 images_dir: img
 javascripts_dir: js
+output_style: expanded
+line_comments: false
+sass_options:
+    line_numbers: false
+    # style: compressed
