@@ -9,31 +9,6 @@ function undefined_(obj) {
     return (typeof obj === "undefined");
 }
 
-function replaceWithQuote($dom) {
-    var stack = new Array();
-    excluded = ['pre', 'code', 'kbd', 'samp', 'var'];
-
-    stack.push($dom);
-    
-    while (stack.length != 0) {
-        $child = stack.pop();
-        if (!undefined_($child[0].tagName) && $.inArray($child[0].tagName.toLowerCase(), excluded) != -1) {
-            continue;
-        }
-        var text_obj = $child.contents()
-              .filter(function(){
-                return this.nodeType == 3;
-            }).first()[0];
-        if (!undefined_(text_obj)) {
-            var text = text_obj.textContent;
-            text_obj.textContent = text.replace(/"(.*?)"/, function(match, $i, offset, original) { return "“" + $i + "”"; })
-                .replace(/'(.*?)'/, function(match, $i, offset, original) { return "‘" + $i + "’"; })
-                .replace(/\.\.\./g, "…");
-        }
-        putToStack(stack, $child);
-    }
-}
-
 function addLabel() {
     $('pre[data-title]').each(function(i) {
         $code = $(this).find('code');
@@ -109,7 +84,6 @@ function addLineNumber($code) {
 }
 
 $(document).ready(function(){
-    replaceWithQuote($('#main-data'));
     addEventListener('load', function() {
         $('pre code').each(function(i) {
             var code = this;
