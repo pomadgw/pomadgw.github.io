@@ -4,17 +4,16 @@
   {% include head.html %}
 
   <body>
-    <div class="container">
+    <div class="container main-data" id="main-data">
       {% include header.html %}
-
-      <div class="row main-data">
-        <div class="col-sm-12 col-md-8">
-          <div class="wrapper">
+      
+      <div class="wrapper-text">
+      <div class="row">
+        <div class="col-md-12">
             {{ content }}
-          </div>
         </div>
         
-        <div class="col-sm-12 col-md-4">
+        <div class="col-md-12">
           {% include footer.html %}
         </div>
 
@@ -22,10 +21,14 @@
           &copy; 2015. Rahadian Yusuf.
         </footer>
       </div>
+      </div>
     </div>
 
     <!-- SCRIPT HERE -->
     <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/highlight.pack.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/FileSaver.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/scripts.js" | prepend: site.baseurl }}"></script>
   </body>
 
 </html>

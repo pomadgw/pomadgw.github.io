@@ -8,11 +8,135 @@
 // @import "bootstrap-grid";
 // or Import Bootstrap Reboot
 // @import "bootstrap-reboot";
+@import "normalize-opentype";
 @import "syntax";
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-serif;
+    display: inline-block;
+}
+
+h1, h2 {
+    font-variant: small-caps;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin: 1rem 0;
+    border-bottom: 0.2rem solid $body-color;
+    padding: 0 0.1em 0.1em;
+}
+
+.post-list h2 {
+    border: none;
+    margin: 0.1rem 0;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+// .flow-text {
+//     @include media-breakpoint-up(xs) {
+//         font-size: $font-size-xs;
+//     }
+//     @include media-breakpoint-up(sm) {
+//         font-size: $font-size-sm;
+//     }
+//     @include media-breakpoint-up(md) {
+//         font-size: $font-size-base;
+//     }
+//     @include media-breakpoint-up(lg) {
+//         font-size: $font-size-lg;
+//     }
+// }
+
+blockquote {
+    border-left: 0.5rem solid $gray-lighter;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+
+    p {
+        &:before {
+            content: '“';
+        }
+        &:after {
+            content: '”';
+        }
+    }
+    
+    footer {
+        color: $gray-light;
+        font-size: 0.8em;        
+        a {
+            color: lighten($link-color, 15%);
+        }
+
+        &:before {
+            content: '— ';
+        }
+    }
+}
+
+/** taken from materialize.css, with changes */
+$range : 75em - 34em !default;
+$intervals: 20 !default;
+$interval-size: $range / $intervals !default;
+.flow-text {
+    font-weight: 300;
+    $i: 0;
+    @while $i <= $intervals {
+        @media only screen and (min-width : 34em + ($i * $interval-size)) {
+            font-size: 1.2rem * (1 + (.02 * $i));
+        }
+        $i: $i + 1;
+    }
+
+    // Handle below 360px screen
+    @media only screen and (max-width: 34em) {
+        font-size: 1.2rem;
+    }
+}
+
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+.hanging-quote, blockquote {
+  hanging-punctuation: first;
+  text-indent: -0.3em;
+}
+
 .main-data {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    // margin-top: 2em;
+    margin-bottom: 2rem;
+    padding: 0;
+    background-color: #fff;
+}
+
+.wrapper-text {
+    padding: 2rem 5rem;
+}
+
+@include media-breakpoint-down(md) {
+    .wrapper-text {
+        padding: 2rem 2rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .main-data {
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .footer-heading {
@@ -54,3 +178,93 @@
         border-bottom: 3px solid #888;
     }
 }
+
+.header {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.bg-header-intro-img {
+    // background-image: url(/img/Me.jpg);
+    background-image: url(/img/Me.jpg);
+    padding: 0;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.biodata {
+    margin-bottom: 2.5rem;
+}
+
+.copyright {
+    text-align: center;
+    padding: 2em;
+}
+
+.site-footer {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.post-header {
+    .post-meta {
+        text-align: center;
+    }
+}
+
+.table-code {
+    border: 1px solid $gray-lighter;
+    padding: 1em;
+    // width: 100%;
+    
+    td {
+        padding: 1em 0;
+    }
+
+    td.line-num {
+        padding-left: 1em;
+        padding-right: 0.5em;
+        text-align: right;
+        border-right: 1px solid $gray-lighter;
+        color: $gray-light;
+    }
+
+    td.code {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+.figure-code {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    pre {
+        display: inline-block;
+        margin: 0;
+    }
+    figcaption {
+        text-align: center;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.page-link {
+    margin: 0 0.2em;
+}
+
+.hide-element {
+    visibility: hidden;
+}
+
+// pre {
+//     border: 1px solid $gray-lighter;
+//     padding: 1em;
+// }
