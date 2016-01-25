@@ -5,7 +5,7 @@ date:   2016-01-25 14:16:00 +0700
 author: Rahadian Yusuf
 tags: 
 - design
-- ty­pog­ra­phy
+- typography
 ---
 
 This is interesting
