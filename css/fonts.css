@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Platin";
+  src: local("Plantin W01 Light");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("PlantinW01-LightItalic");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("Plantin W01 Semibold");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("PlantinW01-SemiboldItal");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("Plantin W01");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("Plantin W01 Italic");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("Plantin W01 Bold");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Platin";
+  src: local("Plantin W01 Bold Italic");
+  font-weight: 700;
+  font-style: italic;
+}
+/*
+font-family:'Trade Gothic W01 Light';
+font-family:'TradeGothicW01-LightObl';
+font-family:'Trade Gothic W01 Obl';
+font-family:'Trade Gothic W01 Bold';
+font-family:'TradeGothicW01-BoldObl';
+font-family:'TradeGothicW01-Bold2Obl';
+font-family:'Trade Gothic W01 Cn_18';
+font-family:'TradeGothicW01-Cn18Obl';
+font-family:'TradeGothicW01-BoldCn20_675334';
+font-family:'TradeGothicW01-BoldCn20_675337';
+font-family:'Trade Gothic W01 Roman';
+
+*/
