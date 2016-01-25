@@ -5,9 +5,10 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/562f66c8-64b2-4c52-a829-84707a730c7a.js"></script>
   <!-- <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.baseurl }}"> -->
   <!-- <link rel="stylesheet" href="{{ "/css/print.css" | prepend: site.baseurl }}"> -->
+  <!-- <link rel="stylesheet" href="{{ "/css/fonts.css" | prepend: site.baseurl }}"> -->
   <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
   <link href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print" rel="stylesheet" type="text/css" /> 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

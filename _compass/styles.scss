@@ -11,8 +11,30 @@
 @import "normalize-opentype";
 @import "syntax";
 
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-serif;
+    // font-family: $font-family-serif;
     display: inline-block;
 }
 
@@ -121,7 +143,7 @@ $interval-size: $range / $intervals !default;
 }
 
 .wrapper-text {
-    padding: 2rem 5rem;
+    padding: 2rem;
 }
 
 @include media-breakpoint-down(md) {
@@ -204,7 +226,7 @@ $interval-size: $range / $intervals !default;
 }
 
 .site-footer {
-    width: 50%;
+    width: 20rem;
     margin: auto;
     text-align: center;
 }
@@ -262,6 +284,45 @@ $interval-size: $range / $intervals !default;
 
 .hide-element {
     visibility: hidden;
+}
+
+@include media-breakpoint-up(sm) {
+    .navbar .nav-header {
+        display: inline-block;
+        .clearfix { display: none; }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar {
+        padding: 0;
+        .nav-header {
+            padding: 0.5em 0.1em;
+        }
+        .collapse {
+            background-color: $gray;
+            color: $gray-lighter;
+            .nav {
+                .nav-item, .nav-item + .nav-item {
+                    margin-left: 1em;
+                    padding-top: 0.5em;
+                    float: none;
+                    a {
+                        color: $gray-lighter;
+                    }
+                }
+            }
+            .form-inline {
+                padding: 1em;
+
+                button {
+                    margin: 0.5em 0;
+                    background-color: $gray-lighter;
+                    color: $gray;
+                }
+            }
+        }
+    }
 }
 
 // pre {

@@ -145,14 +145,14 @@ $link-hover-decoration:      underline;
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:     "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:          "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif:     "Trade Gothic W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:          "Plantin W01", "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
-// $font-family-base:           $font-family-sans-serif;
 $font-family-base:           $font-family-sans-serif;
+// $font-family-base:           $font-family-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root:             16px;
+$font-size-root:             16	px;
 
 $font-size-base:             1rem;
 $font-size-lg:               1.25rem;
@@ -180,7 +180,9 @@ $line-height:                1.5;
 
 // $headings-margin-bottom:     ($spacer / 2);
 // $headings-font-family:       inherit;
+$headings-font-family:       $font-family-serif;
 // $headings-font-weight:       500;
+$headings-font-weight:       700;
 // $headings-line-height:       1.1;
 // $headings-color:             inherit;
 
@@ -247,9 +249,10 @@ $line-height:                1.5;
 // $btn-padding-y:                  .375rem;
 // $btn-font-weight:                normal;
 
-// $btn-primary-color:              #fff;
-// $btn-primary-bg:                 $brand-primary;
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
 // $btn-primary-border:             $btn-primary-bg;
+$btn-primary-border:             $gray-dark;
 
 // $btn-secondary-color:            $gray-dark;
 // $btn-secondary-bg:               #fff;
