@@ -6743,6 +6743,9 @@ blockquote footer p:before {
 .post-header .post-meta {
   text-align: center;
 }
+.post-header .post-meta a {
+  color: #373a3c;
+}
 
 .table-code {
   border: 1px solid #eceeef;

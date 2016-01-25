@@ -2,7 +2,10 @@
 layout: post
 title:  "Interesting things about ty­pog­ra­phy"
 date:   2016-01-25 14:16:00 +0700
-categories: design ty­pog­ra­phy
+author: Rahadian Yusuf
+tags: 
+- design
+- ty­pog­ra­phy
 ---
 
 This is interesting

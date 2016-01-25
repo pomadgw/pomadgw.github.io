@@ -236,6 +236,10 @@ $interval-size: $range / $intervals !default;
     hyphens: none;
     .post-meta {
         text-align: center;
+
+        a {
+            color: $gray-dark;
+        }
     }
 }
 
