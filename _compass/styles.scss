@@ -295,6 +295,12 @@ $interval-size: $range / $intervals !default;
     }
 }
 
+@include media-breakpoint-down(md) {
+    .post-header {
+        width: 100%;
+    }
+}
+
 @include media-breakpoint-up(md) {
     .post-header {
         width: 30rem;

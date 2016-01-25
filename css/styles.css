@@ -6497,11 +6497,6 @@ h2 {
   margin: 0.1rem 0;
 }
 
-.post-header {
-  width: 30rem;
-  margin: auto;
-}
-
 p {
   text-align: justify;
   text-justify: inter-word;
@@ -6651,7 +6646,7 @@ blockquote footer p:before {
 
 .hanging-quote, blockquote {
   hanging-punctuation: first;
-  text-indent: -0.3em;
+  text-indent: -0.4em;
 }
 
 .main-data {
@@ -6734,11 +6729,17 @@ blockquote footer p:before {
 }
 
 .site-footer {
-  width: 20rem;
+  width: 17rem;
   margin: auto;
   text-align: center;
 }
 
+.post-header {
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
 .post-header .post-meta {
   text-align: center;
 }
@@ -6794,6 +6795,17 @@ blockquote footer p:before {
   }
   .navbar .nav-header .clearfix {
     display: none;
+  }
+}
+@media (max-width: 991px) {
+  .post-header {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .post-header {
+    width: 30rem;
+    margin: auto;
   }
 }
 @media (max-width: 767px) {
