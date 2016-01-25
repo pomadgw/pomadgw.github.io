@@ -387,6 +387,9 @@
 
 /* Mozilla specific */
 /* line 65, ../../_compass/syntax.scss */
+.lineno::-moz-selection {
+  background-color: transparent;
+}
 .lineno::selection {
   background-color: transparent;
 }
