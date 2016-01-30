@@ -6476,6 +6476,10 @@ html {
 }
 h1, h2, h3, h4, h5, h6 {
   display: inline-block;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 
 h1, h2 {
