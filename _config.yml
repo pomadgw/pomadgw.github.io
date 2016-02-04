@@ -21,7 +21,6 @@ markdown: kramdown
 gems:
 - jekyll-compass
 - jekyll-paginate
-- jekyll-archives
 - octopress-autoprefixer
 
 permalink: :year/:month/:day/:title.html

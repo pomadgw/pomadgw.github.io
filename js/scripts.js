@@ -13,7 +13,7 @@ function addLabel() {
     $('pre[data-title]').each(function(i) {
         $code = $(this).find('code');
         var title = $(this).attr('data-title');
-        
+
         $title_name = title;
         if ($(this).attr('data-download') && $(this).attr('data-download') == 'true') {
             $a = $('<a/>', {
@@ -27,7 +27,7 @@ function addLabel() {
                 var blob = new Blob([text], {type: "application/octet-stream;charset=utf-8"});
                 saveAs(blob, title);
             });
-            
+
             $a.text(title);
 
             $title_name = $a;
@@ -50,7 +50,7 @@ function addLineNumber($code) {
         data = $code.text();
         line_num = data.split('\n').length;
         // var html_data = $code.html();
-        
+
         $table = $('<table/>', {'class': 'table-code'});
         $tr = $('<tr/>');
         $line_num_col = $('<td/>', {'class': 'line-num'});
@@ -68,7 +68,7 @@ function addLineNumber($code) {
         }
         // $line_num_col_pre.text(line_content);
         $line_num_col.text(line_content);
-        
+
         // $line_num_col.append($line_num_col_pre);
 
         $tr.append($line_num_col);
@@ -113,5 +113,14 @@ $(document).ready(function(){
             worker.postMessage({'lang': lang, 'code': code.textContent});
         });
     });
+
     addLabel();
+
+    $('.MJXc-display').each(function(idx){
+        console.log('!!!');
+        $maths = $(this);
+        $div = $('<div>', {class: 'math-display'});
+        $div.append($maths)
+        $(this).replaceWith($div);
+    });
 });
