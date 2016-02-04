@@ -14,7 +14,7 @@ GITHUB_REPONAME = "pomadgw/pomadgw.github.io"
 
 def process_js(js_dir)
   Dir.foreach(js_dir) do |item|
-    next if item == '.' or item == '..'
+    next if item == '.' or item == '..' or File.extname(item) != '.js'
     # do work on real items
     path = js_dir + '/' + item
     puts path
@@ -27,6 +27,21 @@ def process_js(js_dir)
       process_js(path)
     end
   end
+end
+
+def process_css(css_dir)
+  Dir.foreach(css_dir) do |item|
+    next if item == '.' or item == '..' or File.extname(item) != '.css'
+    # do work on real items
+    path = css_dir + '/' + item
+    puts path
+    if File.file?(path) then
+      system "cleancss -o #{path} #{path}"
+    else
+      process_css(path)
+    end
+  end
+
 end
 
 MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "Oktober", "November", "December"]
@@ -110,8 +125,10 @@ task :generate => [:generate_archive] do
     "destination" => "_site"
   })).process
   js_dir = '_site/js'
+  css_dir = '_site/css'
   puts
   process_js js_dir
+  process_css css_dir
 end
 
 desc "Generate and publish blog to gh-pages"
