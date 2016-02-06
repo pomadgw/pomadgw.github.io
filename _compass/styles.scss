@@ -56,6 +56,7 @@ h2 {
 .post-list h2 {
     border: none;
     margin: 0.1rem 0;
+    padding: 0;
 }
 
 
@@ -210,12 +211,19 @@ $interval-size: $range / $intervals !default;
 }
 
 .bg-header-intro-img {
-    // background-image: url(/img/Me.jpg);
-    background-image: url(/img/Me.jpg);
     padding: 0;
     height: 400px;
     background-size: cover;
     background-position: center center;
+    @include media-breakpoint-down(md) {
+        background-image: url('/img/360.png');
+    }
+    @include media-breakpoint-up(md) {
+        background-image: url('/img/720.png');
+    }
+    @include media-breakpoint-up(xl) {
+        background-image: url('/img/1080.png');
+    }
 }
 
 .biodata {
