@@ -17,52 +17,52 @@ html {
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 16px;
+  font-size: 16px;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 16px;
+  font-size: 16px;
   }
 }
 
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 20px;
+  font-size: 20px;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    // font-family: $font-family-serif;
-    display: inline-block;
-    hyphens: none;
+  // font-family: $font-family-serif;
+  display: inline-block;
+  hyphens: none;
 }
 
 h1, h2 {
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    margin: 1rem 0;
-    border-bottom: 0.2rem solid $body-color;
-    padding: 0 0.1em 0.1em;
+  margin: 1rem 0;
+  border-bottom: 0.2rem solid $body-color;
+  padding: 0 0.1em 0.1em;
 }
 
 .post-list h2 {
-    border: none;
-    margin: 0.1rem 0;
-    padding: 0;
+  border: none;
+  margin: 0.1rem 0;
+  padding: 0;
 }
 
 
 p {
-    text-align: justify;
-    text-justify: inter-word;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 // .flow-text {
@@ -81,31 +81,31 @@ p {
 // }
 
 blockquote {
-    border-left: 0.5rem solid $gray-lighter;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    position: relative;
+  border-left: 0.5rem solid $gray-lighter;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
 
-    &> p {
-        &:before {
-            content: '“';
-        }
-        &:after {
-            content: '”';
-        }
+  &> p {
+    &:before {
+      content: '“';
+    }
+    &:after {
+      content: '”';
+    }
+  }
+
+  footer p {
+    color: $gray-light;
+    font-size: 0.8em;
+    a {
+      color: lighten($link-color, 15%);
     }
 
-    footer p {
-        color: $gray-light;
-        font-size: 0.8em;
-        a {
-            color: lighten($link-color, 15%);
-        }
-
-        &:before {
-            content: '— ';
-        }
+    &:before {
+      content: '— ';
     }
+  }
 }
 
 /** taken from materialize.css, with changes */
@@ -113,24 +113,24 @@ $range : 75em - 34em !default;
 $intervals: 20 !default;
 $interval-size: $range / $intervals !default;
 .flow-text {
-    font-weight: 300;
-    $i: 0;
-    @while $i <= $intervals {
-        @media only screen and (min-width : 34em + ($i * $interval-size)) {
-            font-size: 1.2rem * (1 + (.02 * $i));
-        }
-        $i: $i + 1;
+  font-weight: 300;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 34em + ($i * $interval-size)) {
+      font-size: 1.2rem * (1 + (.02 * $i));
     }
+    $i: $i + 1;
+  }
 
-    // Handle below 360px screen
-    @media only screen and (max-width: 34em) {
-        font-size: 1.2rem;
-    }
+  // Handle below 360px screen
+  @media only screen and (max-width: 34em) {
+    font-size: 1.2rem;
+  }
 }
 
 
 .small-caps {
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 .hanging-quote, blockquote {
@@ -139,228 +139,242 @@ $interval-size: $range / $intervals !default;
 }
 
 .main-data {
-    // margin-top: 2em;
-    margin-bottom: 2rem;
-    padding: 0;
-    background-color: #fff;
+  // margin-top: 2em;
+  margin-bottom: 2rem;
+  padding: 0;
+  background-color: #fff;
 }
 
 .wrapper-text {
-    padding: 2rem;
+  &.notindex {
+    padding: 2rem 8rem;
+  }
+  &.isindex {
+    padding: 2rem 4rem;
+  }
 }
 
 @include media-breakpoint-down(md) {
-    .wrapper-text {
-        padding: 2rem 2rem;
+  .wrapper-text {
+    &.notindex {
+      padding: 2rem 3rem;
     }
+    &.isindex {
+      padding: 2rem 2rem;
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .main-data {
-        width: 75%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .main-data {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .footer-heading {
-    font-family: $font-family-monospace;
+  font-family: $font-family-monospace;
 }
 
 .credit {
-    width: 100%;
-    margin: 1em auto;
+  width: 100%;
+  margin: 1em auto;
 }
 
 .icon {
-    &> svg {
-        width: 16px;
-        height: 16px;
-    }
+  &> svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 #search_results {
-    padding: 0;
-    &> li {
-        display: block;
-        margin: 1em 0;
-    }
+  padding: 0;
+  &> li {
+    display: block;
+    margin: 1em 0;
+  }
 }
 
 .tag {
-    &, &:visited {
-        margin: 0;
-        // border-top: none;
-        // border-bottom: 3px solid #888;
-        padding: 0.1rem 0.5rem;
-        background-color: #ddd;
-        color: #333;
-    }
+  &, &:visited {
+    margin: 0;
+    // border-top: none;
+    // border-bottom: 3px solid #888;
+    padding: 0.1rem 0.5rem;
+    background-color: #ddd;
+    color: #333;
+  }
 
-    &:hover {
-        text-decoration: none;
-        border-bottom: 3px solid #888;
-    }
+  &:hover {
+    text-decoration: none;
+    border-bottom: 3px solid #888;
+  }
 }
 
 .header {
-    text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .bg-header-intro-img {
-    padding: 0;
-    height: 400px;
-    background-size: cover;
-    background-position: center center;
-    @include media-breakpoint-down(md) {
-        background-image: url('/img/360.png');
-    }
-    @include media-breakpoint-up(md) {
-        background-image: url('/img/720.png');
-    }
-    @include media-breakpoint-up(xl) {
-        background-image: url('/img/1080.png');
-    }
+  padding: 0;
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+  @include media-breakpoint-down(md) {
+    background-image: url('/img/360.png');
+  }
+  @include media-breakpoint-up(md) {
+    background-image: url('/img/720.png');
+  }
+  @include media-breakpoint-up(xl) {
+    background-image: url('/img/1080.png');
+  }
 }
 
 .biodata {
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .copyright {
-    text-align: center;
-    padding: 2em;
+  text-align: center;
+  padding: 2em;
 }
 
 .site-footer {
-    width: 17rem;
-    margin: auto;
-    text-align: center;
+  width: 17rem;
+  margin: auto;
+  text-align: center;
 }
 
 .post-header {
-    hyphens: none;
-    .post-meta {
-        text-align: center;
+  hyphens: none;
+  .post-meta {
+    text-align: center;
 
-        a {
-            color: $gray-dark;
-        }
+    a {
+      color: $gray-dark;
     }
+  }
 }
 
 .table-code {
-    border: 1px solid $gray-lighter;
-    padding: 1em;
-    // width: 100%;
+  border: 1px solid $gray-lighter;
+  padding: 1em;
+  // width: 100%;
 
-    td {
-        padding: 1em 0;
-    }
+  td {
+    padding: 1em 0;
+  }
 
-    td.line-num {
-        padding-left: 1em;
-        padding-right: 0.5em;
-        text-align: right;
-        border-right: 1px solid $gray-lighter;
-        color: $gray-light;
-    }
+  td.line-num {
+    padding-left: 1em;
+    padding-right: 0.5em;
+    text-align: right;
+    border-right: 1px solid $gray-lighter;
+    color: $gray-light;
+  }
 
-    td.code {
-        padding-left: 1em;
-        padding-right: 1em;
-    }
+  td.code {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 .figure-code {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  pre {
+    display: inline-block;
+    margin: 0;
+  }
+  figcaption {
+    text-align: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    pre {
-        display: inline-block;
-        margin: 0;
-    }
-    figcaption {
-        text-align: center;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        margin: 0 auto;
-        padding: 0;
-    }
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .page-link {
-    margin: 0 0.2em;
+  margin: 0 0.2em;
 }
 
 .hide-element {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 @include media-breakpoint-up(sm) {
-    .navbar .nav-header {
-        display: inline-block;
-        .clearfix { display: none; }
-    }
+  .navbar .nav-header {
+    display: inline-block;
+    .clearfix { display: none; }
+  }
 }
 
 @include media-breakpoint-down(md) {
-    .post-header {
-        width: 100%;
-    }
+  .post-header {
+    width: 100%;
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .post-header {
-        width: 30rem;
-        margin: auto;
-    }
+  .post-header {
+    width: 30rem;
+    margin: auto;
+  }
 }
 
 @include media-breakpoint-down(sm) {
-    .navbar {
-        padding: 0;
-        .nav-header {
-            padding: 0.5em 0.1em;
-        }
-        .collapse {
-            background-color: $gray;
-            color: $gray-lighter;
-            .nav {
-                .nav-item, .nav-item + .nav-item {
-                    margin-left: 1em;
-                    padding-top: 0.5em;
-                    float: none;
-                    a {
-                        color: $gray-lighter;
-                    }
-                }
-            }
-            .form-inline {
-                padding: 1em;
-
-                button {
-                    margin: 0.5em 0;
-                    background-color: $gray-lighter;
-                    color: $gray;
-                }
-            }
-        }
+  .navbar {
+    padding: 0;
+    .nav-header {
+      padding: 0.5em 0.1em;
     }
+    .collapse {
+      background-color: $gray;
+      color: $gray-lighter;
+      .nav {
+        .nav-item, .nav-item + .nav-item {
+          margin-left: 1em;
+          padding-top: 0.5em;
+          float: none;
+          a {
+            color: $gray-lighter;
+          }
+        }
+      }
+      .form-inline {
+        padding: 1em;
+
+        button {
+          margin: 0.5em 0;
+          background-color: $gray-lighter;
+          color: $gray;
+        }
+      }
+    }
+  }
 }
 
 .smaller-math {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 // .math-display {
-    // @extend .table-responsive;
+  // @extend .table-responsive;
 // }
-// pre {
-//     border: 1px solid $gray-lighter;
-//     padding: 1em;
-// }
+.gutter.gl {
+    padding-right: 1rem;
+    pre.lineno {
+      border-left: 2px $gray-lighter solid;
+      padding-left: 10px;
+      color: $gray-light;
+    }
+}

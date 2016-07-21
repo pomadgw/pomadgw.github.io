@@ -1,6 +1,6 @@
 require:
 - bootstrap
-project_path: "/home/rahadian.yusuf/src/fromgit/pomadgw.github.io/"
+project_path: "/home/rianyusuf94/src/fromgit/pomadgw.github.io/"
 http_path: "/"
 css_dir: css
 sass_dir: _compass
