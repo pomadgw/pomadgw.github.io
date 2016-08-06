@@ -1,0 +1,1 @@
+onmessage=function(a){importScripts("/js/highlight.pack.js");var s;s=""!=a.data.lang?self.hljs.highlight(a.data.lang,a.data.code):self.hljs.highlightAuto(a.data.code),postMessage(s.value)};
