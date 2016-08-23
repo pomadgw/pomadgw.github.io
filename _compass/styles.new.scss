@@ -1,0 +1,27 @@
+//
+
+$global-namespace: 'pmdgw-';
+
+// SETTINGS
+@import "settings/variables";
+@import "settings/typography";
+
+// BASE
+@import "base/normalize";
+// TODO: move normalize-opentype to base folder
+// @import "base/normalize-opentype";
+@import "normalize-opentype";
+@import "base/typography";
+
+// HELPER
+@import "helpers/media-queries";
+
+// COMPONENTS
+@import "components/container";
+@import "components/grid";
+
+@include mq(small) {
+  body {
+    color: blue;
+  }
+}

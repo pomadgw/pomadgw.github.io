@@ -1,0 +1,45 @@
+@if (not $settings-imported) {
+  @warn "Hmm";
+}
+
+@mixin grid($col-num) {
+  $parent: &;
+  display: flex;
+
+  &__cell {
+    padding: 1em 0 0 1em;
+  }
+
+  &__cell--fit {
+    flex: 1;
+  }
+
+  @for $i from 1 through $col-num {
+    $percent: $i / $col-num * 100%;
+    &__cell--#{$i} {
+      flex: 0 0 $percent;
+    }
+  }
+
+  $breakpoints: ('small', 'medium', 'large', 'huge');
+  @each $breakpoint in $breakpoints {
+    @include mq($breakpoint) {
+      @for $i from 1 through $col-num {
+        $percent: $i / $col-num * 100%;
+        #{$parent}__cell--#{$breakpoint}-#{$i} {
+          flex: 0 0 $percent;
+        }
+      }
+    }
+  }
+}
+
+@mixin grid-gutter {
+  // gutter
+  margin: -1em 0 0 -1em;
+}
+
+.#{$global-namespace}grid {
+  @include grid(12);
+  @include grid-gutter;
+}

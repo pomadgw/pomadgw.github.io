@@ -1,0 +1,17 @@
+@mixin container {
+  $breakpoints: ('small', 'medium', 'large', 'huge');
+  @for $i from 2 through 4 {
+    @include mq(nth($breakpoints, $i)) {
+      min-width: map-get($breaks, nth($breakpoints, $i - 1));
+      max-width: map-get($breaks, nth($breakpoints, $i));
+      margin: auto;
+    }
+  }
+  &-fluid {
+    width: 100%;
+  }
+}
+
+.#{$global-namespace}container {
+  @include container;
+}

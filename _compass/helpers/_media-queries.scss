@@ -1,0 +1,28 @@
+
+$queries: (
+  "small": "(max-width: #{$tablet-width - 1})",
+  "medium-up": "(min-width: #{$tablet-width})",
+  "medium": "(min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1})",
+  "large-up": "(min-width: #{$desktop-width})",
+  "large": "(min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1})",
+  "huge": "(min-width: #{$large-desktop-width})"
+);
+
+@mixin mq($params) {
+  @media screen and #{map-get($queries, $params)} {
+    @content;
+  }
+}
+
+// From https://davidwalsh.name/write-media-queries-sass
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

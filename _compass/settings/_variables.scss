@@ -1,0 +1,10 @@
+$global-namespace: null !default;
+
+$phone-size: 640px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1280px;
+
+$breaks: ('small': $phone-size, 'medium': $tablet-width, 'large': $desktop-width, 'huge': $large-desktop-width);
+
+$settings-imported: true;
