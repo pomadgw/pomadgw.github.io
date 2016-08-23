@@ -2,22 +2,35 @@
   @warn "Hmm";
 }
 
+$gutter-width: 1rem;
+$half-gutter-width: $gutter-width / 2;
+$gutter-compensation: -1 * $half-gutter-width;
+
 @mixin grid($col-num) {
   $parent: &;
+
+  box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
 
   &__cell {
-    padding: 1em 0 0 1em;
+    box-sizing: border-box;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    flex: 0 1 auto;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   &__cell--fit {
     flex: 1;
+    max-width: 100%;
   }
 
   @for $i from 1 through $col-num {
     $percent: $i / $col-num * 100%;
     &__cell--#{$i} {
-      flex: 0 0 $percent;
+      flex: 0 1 $percent;
     }
   }
 
@@ -27,7 +40,8 @@
       @for $i from 1 through $col-num {
         $percent: $i / $col-num * 100%;
         #{$parent}__cell--#{$breakpoint}-#{$i} {
-          flex: 0 0 $percent;
+          flex: 0 1 $percent;
+          max-width: $percent;
         }
       }
     }
@@ -36,7 +50,8 @@
 
 @mixin grid-gutter {
   // gutter
-  margin: -1em 0 0 -1em;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
 }
 
 .#{$global-namespace}grid {

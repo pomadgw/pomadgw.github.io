@@ -7,14 +7,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test</title>
   <link rel="stylesheet" href="/css/styles.new.css">
+  <style>
+    .bg {
+      background-color: #aaa;
+      color: #fff;
+    }
+    .pmdgw-grid {
+      margin-bottom: 10px;
+    }
+    .pmdgw-grid__cell {
+    }
+    .pmdgw-grid__cell > div {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex: 1;
+      height: 100px;
+    }
+    .content {
+      text-align: center;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-<div class="pmdgw-container">
+<section class="pmdgw-container">
+  <header>
+    <h1>Grid</h1>
+  </header>
   <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2 pmdgw-grid__cell--small-4">Halo</div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3 pmdgw-grid__cell--small-4">Dunia</div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit pmdgw-grid__cell--small-4">Dan kawan-kawan</div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2 pmdgw-grid__cell--small-4"><div class="bg"><div class="content">Halo</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3 pmdgw-grid__cell--small-4"><div class="bg"><div class="content">Dunia</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit pmdgw-grid__cell--small-4"><div class="bg"><div class="content">Dan kawan-kawan</div></div></div>
   </div>
-</div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--6"><div class="bg"><div class="content">6</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--6"><div class="bg"><div class="content">6</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
+  </div>
+  <div class="pmdgw-grid">
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
+    <div class="pmdgw-grid__cell pmdgw-grid__cell--6"><div class="bg"><div class="content">6</div></div></div>
+  </div>
+</section>
 </body>
 </html>
