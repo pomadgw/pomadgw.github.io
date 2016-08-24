@@ -1,0 +1,19 @@
+$blockquote-border-color: #ddd;
+$blockquote-border-size: 1rem;
+
+.#{$global-namespace}blockquote {
+  box-sizing: border-box;
+  border-top: 1px solid $blockquote-border-color;
+  border-right: 1px solid $blockquote-border-color;
+  border-bottom: 1px solid $blockquote-border-color;
+  border-left: $blockquote-border-size solid $blockquote-border-color;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1.5rem;
+
+  &__footer {
+    &::before {
+      content: "—";
+    }
+  }
+}
