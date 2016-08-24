@@ -9,6 +9,7 @@ body {
 
 p {
   line-height: $line-height;
+  text-align: $paragraph-text-align;
 }
 
 h1,
@@ -43,4 +44,27 @@ h5 {
 
 h6 {
   font-size: $font-size-h6;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover, &.#{$global-namespace}a--hovered {
+    text-decoration: none;
+    color: $link-hovered-color;
+  }
+
+  &:active, &.#{$global-namespace}a--activated {
+    color: $link-active-color;
+  }
+
+  &:visited, &.#{$global-namespace}a--visited {
+    color: $link-visited-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $link-hovered-color;
+    }
+  }
 }
