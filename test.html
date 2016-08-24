@@ -1,156 +1,396 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test</title>
-  <link rel="stylesheet" href="/css/styles.new.css">
-  <style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <link rel="stylesheet" href="/css/styles.new.css">
+    <style>
     .bg {
-      background-color: #aaa;
-      color: #fff;
+        background-color: #aaa;
+        color: #fff;
     }
+
     .pmdgw-grid {
-      margin-bottom: 10px;
+        margin-bottom: 10px;
     }
-    .pmdgw-grid__cell {
-    }
+
+    .pmdgw-grid__cell {}
+
     .pmdgw-grid__cell > div {
-      display: flex;
-      align-items: center;
-      align-content: center;
-      flex: 1;
-      height: 100px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex: 1;
+        height: 100px;
     }
+
     .content {
-      text-align: center;
-      width: 100%;
+        text-align: center;
+        width: 100%;
     }
-  </style>
+    </style>
 </head>
+
 <body>
-<section class="pmdgw-container">
-  <header>
-    <h1>Typography</h1>
-  </header>
-
-  <h1>H1: This and below are headings.</h1>
-  <h2>H2: Judgement Time!</h2>
-  <h3>H3: People's lives are Earth's future.</h3>
-  <h4>H4: This H4 tag is.</h4>
-
-  <hr>
-
-  <h2>Paragraph</h2>
-  <p>The tropics are a region of the Earth surrounding the Equator. They are delimited in latitude by the Tropic of Cancer in the Northern Hemisphere at 23°26′13.7″ (or 23.43713°) N and the Tropic of Capricorn in the Southern Hemisphere at 23°26′13.7″ (or 23.43713°) S; these latitudes correspond to the axial tilt of the Earth. The tropics are also referred to as the tropical zone and the torrid zone (see geographical zone). The tropics include all the areas on the Earth where the Sun is at a point directly overhead at least once during the solar year (which is a subsolar point).</p>
-</section>
-<section class="pmdgw-container">
-  <header>
-    <h1>Grid</h1>
-  </header>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2 pmdgw-grid__cell--small-4"><div class="bg"><div class="content">Halo</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3 pmdgw-grid__cell--small-4"><div class="bg"><div class="content">Dunia</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit pmdgw-grid__cell--small-4"><div class="bg"><div class="content">Dan kawan-kawan</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--6"><div class="bg"><div class="content">6</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--6"><div class="bg"><div class="content">6</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--3"><div class="bg"><div class="content">3</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--6"><div class="bg"><div class="content">6</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--9"><div class="bg"><div class="content">9</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--1"><div class="bg"><div class="content">1</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--2"><div class="bg"><div class="content">2</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--4"><div class="bg"><div class="content">4</div></div></div>
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--fit"><div class="bg"><div class="content">fit</div></div></div>
-  </div>
-  <div class="pmdgw-grid">
-    <div class="pmdgw-grid__cell pmdgw-grid__cell--12"><div class="bg"><div class="content">12</div></div></div>
-  </div>
-</section>
-
-<section class="pmdgw-container">
-  <h1>Blockquote</h1>
-
-  <blockquote class="pmdgw-blockquote">
-    <p>
-      Organization within the stylesheets is very important, too – the naming system, styles, and specificity of your components should be consistent across your entire project. They should also be organized in a way that mitigates conflicts and prevents leaked styles between selectors.
-    </p>
-    <footer class="pmdgw-blockquote__footer">
-    <a href="http://html5doctor.com/cite-and-blockquote-reloaded/"><cite>
-        Steve Faulkner, 2013
-      </cite></a>
-    </footer>
-  </blockquote>
-</section>
-
-<section class="pmdgw-container">
-  <h1>Link</h1>
-  <p>
-  <a href="https://example.com">Link</a>
-  <a href="https://example.com" class="pmdgw-a--visited">Link visited</a>
-  <a href="https://example.com" class="pmdgw-a--hovered">Link hovered</a>
-  <a href="https://example.com" class="pmdgw-a--activated">Link is in active state</a>
-  </p>
-</section>
+    <section class="pmdgw-container">
+        <header>
+            <h1>Typography</h1>
+        </header>
+        <h1>H1: This and below are headings.</h1>
+        <h2>H2: Judgement Time!</h2>
+        <h3>H3: People's lives are Earth's future.</h3>
+        <h4>H4: This H4 tag is.</h4>
+        <hr>
+        <h2>Paragraph</h2>
+        <p>The tropics are a region of the Earth surrounding the Equator. They are delimited in latitude by the Tropic of Cancer in the Northern Hemisphere at 23°26′13.7″ (or 23.43713°) N and the Tropic of Capricorn in the Southern Hemisphere at 23°26′13.7″ (or 23.43713°) S; these latitudes correspond to the axial tilt of the Earth. The tropics are also referred to as the tropical zone and the torrid zone (see geographical zone). The tropics include all the areas on the Earth where the Sun is at a point directly overhead at least once during the solar year (which is a subsolar point).</p>
+    </section>
+    <section class="pmdgw-container">
+        <header>
+            <h1>Grid</h1>
+        </header>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2 pmdgw-grid__cell--small-4">
+                <div class="bg">
+                    <div class="content">Halo</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3 pmdgw-grid__cell--small-4">
+                <div class="bg">
+                    <div class="content">Dunia</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit pmdgw-grid__cell--small-4">
+                <div class="bg">
+                    <div class="content">Dan kawan-kawan</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                <div class="bg">
+                    <div class="content">6</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                <div class="bg">
+                    <div class="content">6</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--4">
+                <div class="bg">
+                    <div class="content">4</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--4">
+                <div class="bg">
+                    <div class="content">4</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--4">
+                <div class="bg">
+                    <div class="content">4</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3">
+                <div class="bg">
+                    <div class="content">3</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3">
+                <div class="bg">
+                    <div class="content">3</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3">
+                <div class="bg">
+                    <div class="content">3</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3">
+                <div class="bg">
+                    <div class="content">3</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3">
+                <div class="bg">
+                    <div class="content">3</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--3">
+                <div class="bg">
+                    <div class="content">3</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                <div class="bg">
+                    <div class="content">6</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--9">
+                <div class="bg">
+                    <div class="content">9</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--1">
+                <div class="bg">
+                    <div class="content">1</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--2">
+                <div class="bg">
+                    <div class="content">2</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--4">
+                <div class="bg">
+                    <div class="content">4</div>
+                </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--fit">
+                <div class="bg">
+                    <div class="content">fit</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--12">
+                <div class="bg">
+                    <div class="content">12</div>
+                </div>
+            </div>
+        </div>
+        <div class="pmdgw-grid">
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+              <div class="pmdgw-grid">
+                <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                    <div class="bg" style="background-color: #07f;">
+                        <div class="content">
+                            6
+                        </div>
+                    </div>
+                </div>
+                <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                    <div class="bg" style="background-color: #07f;">
+                        <div class="content">
+                            6
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+              <div class="pmdgw-grid">
+                <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                    <div class="bg" style="background-color: #07f;">
+                        <div class="content">
+                            6
+                        </div>
+                    </div>
+                </div>
+                <div class="pmdgw-grid__cell pmdgw-grid__cell--6">
+                    <div class="bg" style="background-color: #07f;">
+                        <div class="content">
+                            6
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="pmdgw-container">
+        <h1>Blockquote</h1>
+        <blockquote class="pmdgw-blockquote">
+            <p>
+                Organization within the stylesheets is very important, too – the naming system, styles, and specificity of your components should be consistent across your entire project. They should also be organized in a way that mitigates conflicts and prevents leaked styles between selectors.
+            </p>
+            <footer class="pmdgw-blockquote__footer">
+                <a href="http://html5doctor.com/cite-and-blockquote-reloaded/">
+                    <cite>
+                        Steve Faulkner, 2013
+                    </cite>
+                </a>
+            </footer>
+        </blockquote>
+    </section>
+    <section class="pmdgw-container">
+        <h1>Link</h1>
+        <p>
+            <a href="https://example.com">Link</a>
+            <a href="https://example.com" class="pmdgw-a--visited">Link visited</a>
+            <a href="https://example.com" class="pmdgw-a--hovered">Link hovered</a>
+            <a href="https://example.com" class="pmdgw-a--activated">Link is in active state</a>
+        </p>
+    </section>
 </body>
+
 </html>
