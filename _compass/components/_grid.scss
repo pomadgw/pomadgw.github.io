@@ -32,6 +32,9 @@ $gutter-compensation: -1 * $half-gutter-width;
     &__cell--#{$i} {
       flex: 0 1 $percent;
     }
+    &__cell--offset-#{$i} {
+      margin-left: $percent;
+    }
   }
 
   $breakpoints: ('small', 'medium', 'large', 'huge');
