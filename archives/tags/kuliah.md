@@ -1,7 +1,7 @@
 ---
 layout: archives
-permalink: 'tags/kuliah/'
-redirect_from: 'archive/tags/kuliah/'
+permalink: 'tag/kuliah/'
+redirect_from: 'archive/tag/kuliah/'
 title: 'kuliah'
 exclude: true
 tag: 'kuliah'

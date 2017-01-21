@@ -1,7 +1,7 @@
 ---
 layout: archives
-permalink: 'tags/college/'
-redirect_from: 'archive/tags/college/'
+permalink: 'tag/college/'
+redirect_from: 'archive/tag/college/'
 title: 'college'
 exclude: true
 tag: 'college'

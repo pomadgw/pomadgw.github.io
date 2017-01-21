@@ -10,7 +10,7 @@ require "uglifier"
 
 # Change your GitHub reponame
 GITHUB_REPONAME = "pomadgw/pomadgw.github.io"
-
+REPO_NAME = 'rianyusuf@pomadgw.xyz:repos/blog.git'
 
 def process_js(js_dir)
   Dir.foreach(js_dir) do |item|
@@ -104,7 +104,7 @@ task :generate_archive do
   for tag in tags
     tagpath = tag.include?(' ') ? tag.downcase.gsub!(' ','-') : tag.downcase
     tagpage_path = tags_folder_path + "/#{tagpath}.md"
-    write_template_file(tagpage_path, "tags/#{tagpath}/", tag, {tag: tag})
+    write_template_file(tagpage_path, "tag/#{tagpath}/", tag, {tag: tag})
   end
   # Create template files for each year and month
   for date in dates
@@ -114,7 +114,7 @@ task :generate_archive do
     monthpage_path = dates_folder_path + "/#{date[:year]}-#{date[:month]}.md"
     month_name = "#{MONTH_NAMES[Integer(date[:month])]} #{date[:year]}"
     write_template_file(monthpage_path, "#{date[:year]}/#{date[:month]}/", month_name, {year: date[:year], month: date[:month]})
-  end 
+  end
   puts "Done generating archive pages"
 end
 
@@ -143,7 +143,7 @@ task :publish => [:generate] do
     system "git add ."
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m #{message.inspect}"
-    system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
+    system "git remote add origin #{REPO_NAME}"
     system "git push origin master --force"
 
     Dir.chdir pwd

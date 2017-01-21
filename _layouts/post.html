@@ -19,7 +19,7 @@ layout: default
   <div>
   	In
 	{% for cat in page.tags %}
-		<a class="tag" href="{{"/tags" | prepend: site.baseurl }}/{{cat}}">{{cat}}</a>
+		<a class="tag" href="{{"/tag" | prepend: site.baseurl }}/{{cat}}">{{cat}}</a>
 	{% endfor %}
   </div>
 

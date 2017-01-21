@@ -1,7 +1,7 @@
 ---
 layout: archives
-permalink: 'tags/design/'
-redirect_from: 'archive/tags/design/'
+permalink: 'tag/design/'
+redirect_from: 'archive/tag/design/'
 title: 'design'
 exclude: true
 tag: 'design'

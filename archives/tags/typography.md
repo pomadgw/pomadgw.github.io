@@ -1,7 +1,7 @@
 ---
 layout: archives
-permalink: 'tags/typography/'
-redirect_from: 'archive/tags/typography/'
+permalink: 'tag/typography/'
+redirect_from: 'archive/tag/typography/'
 title: 'typography'
 exclude: true
 tag: 'typography'
