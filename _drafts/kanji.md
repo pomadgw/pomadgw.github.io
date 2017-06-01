@@ -28,5 +28,6 @@ Ada beberapa jenis huruf yang terdapat di dalam aksara Tionghoa:
 * *Pictogram*, di mana sebagian kecil huruf-huruf di aksara Tionghoa sebenarnya
   bisa dirunut dari gambar suatu benda yang dideskripsikannya. Contohnya, huruf 山,
   yang berarti "gunung", asal-usulnya merupakan gambar gunung.
-  ![Gunung dalam aksara kuno](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/%E5%B1%B1-oracle.svg/60px-%E5%B1%B1-oracle.svg.png)
+
+  {% include img-caption.md url="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/%E5%B1%B1-oracle.svg/60px-%E5%B1%B1-oracle.svg.png" description='Huruf "gunung" dalam aksara tulang ramalan, versi aksara Tionghoa yang paling tua' %}
 
