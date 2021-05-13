@@ -113,6 +113,9 @@ module.exports = {
             scopeLayout: 'Tag'
           },
         ],
+        sitemap: {
+          hostname: 'https://the.pomadgw.xyz'
+        },
       }
     ],
   ],
