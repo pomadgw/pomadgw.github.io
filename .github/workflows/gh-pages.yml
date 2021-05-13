@@ -17,7 +17,7 @@ jobs:
       - name: Setup
         run: |
           yarn install
-          cd docs && yarn install
+          cd docs && yarn install --frozen-lockfile
 
       - name: Build
         run: cd docs && yarn build
@@ -27,6 +27,6 @@ jobs:
         env:
           REPO: self
           BRANCH: master
-          FOLDER: doc/src/.vuepress/dist
+          FOLDER: docs/src/.vuepress/dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
