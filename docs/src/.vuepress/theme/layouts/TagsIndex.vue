@@ -4,8 +4,8 @@
       <h1 class="mt-6 text-3xl">Tags!</h1>
 
       <div class="flex py-12 justify-between">
-        <a v-for="(tag, key) in $tag._metaMap" :key="key" :href="tag.path" class="text-xl block" style="width: 100px">
-          <Tag class="p-2">{{ key }}</Tag>
+        <a v-for="tag in $tag.list" :key="tag.name" :href="tag.path" class="text-xl block" style="width: 100px">
+          <Tag class="p-2">{{ tag.name }}</Tag>
         </a>
       </div>
     </div>
