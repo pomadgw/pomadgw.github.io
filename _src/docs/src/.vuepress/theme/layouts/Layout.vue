@@ -19,12 +19,10 @@
 </template>
 <script>
 import Container from '../components/Container'
-import NavBar from '../components/NavBar'
 
 export default {
   name: 'Layout',
   components: {
-    NavBar,
     Container
   },
   computed: {
