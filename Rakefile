@@ -64,8 +64,20 @@ def write_template_file(path, permalink, title, options={})
   end
 end
 
+
+desc "Generate template"
+task :build_layout do
+  rm_r './_layouts'
+  Dir.chdir('_src') do
+    puts "Generate layout"
+    system 'yarn build'
+
+    cp_r "dist", "../_layouts"
+  end
+end
+
 desc "Generate pages for archive"
-task :generate_archive do
+task :generate_archive => [:build_layout] do
   Jekyll::Site.new(Jekyll.configuration({
     "source"      => ".",
     "destination" => "_site"

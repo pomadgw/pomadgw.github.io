@@ -6,3 +6,4 @@ _site
 bin/
 vendor/
 Gemfile.lock
+_layouts/
