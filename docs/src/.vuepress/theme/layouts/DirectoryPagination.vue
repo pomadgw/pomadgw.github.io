@@ -8,24 +8,25 @@
         </h1>
       </div>
     </div>
+
+    <Pagination />
   </Container>
 </template>
 <script>
 import parseISO from 'date-fns/parseISO'
 import format from 'date-fns/format'
 import Container from '../components/Container'
+import Pagination from '../components/Pagination'
 
 export default {
-  name: 'Home',
+  name: 'DirectoryPagination',
   components: {
-    Container
+    Container,
+    Pagination
   },
   computed: {
     pages() {
-      return this.$site
-        .pages
-        .filter(page => page.frontmatter?.date)
-        .sort((a, b) => parseISO(b.frontmatter?.date) - parseISO(a.frontmatter?.date))
+      return this.$pagination.pages
     },
   },
   methods: {

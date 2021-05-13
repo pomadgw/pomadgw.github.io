@@ -10,10 +10,5 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
-  // // ...apply enhancements for the site.
-  router.addRoute({
-    name: 'tag2',
-    path: '/tag2',
-    component: () => import(/* webpackChunkName: "tag-page" */ './theme/layouts/Tags.vue')
-  })
+
 }

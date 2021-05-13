@@ -26,9 +26,10 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ...[360, 720, 1080].map(width => [
+    ...[[360, 'max-width: 767px'], [720, 'min-width: 768px'], [1080, 'min-width: 1200px']].map(([width, media]) => [
       'link', {
         rel: 'preload',
+        media,
         href: `/img/${width}.png`,
         as: 'image',
       }
@@ -80,6 +81,40 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    [
+      '@vuepress/plugin-blog',
+      {
+        directories: [
+          {
+            // Unique ID of current classification
+            id: 'post',
+            // Target directory
+            dirname: '_posts',
+            // Path of the `entry page` (or `list page`)
+            path: '/',
+            itemLayout: 'Layout',
+            itemPermalink: '/:year/:month/:day/:slug.html',
+          },
+        ],
+        frontmatters: [
+          {
+            // Unique ID of current classification
+            id: 'tag',
+            // Decide that the frontmatter keys will be grouped under this classification
+            keys: ['tag', 'tags'],
+            // Path of the `entry page` (or `list page`)
+            path: '/tag/',
+            // Layout of the `entry page`
+            layout: 'TagsIndex',
+            // Layout of the `scope page`
+            scopeLayout: 'Tag'
+          },
+        ],
+        sitemap: {
+          hostname: 'https://the.pomadgw.xyz'
+        },
+      }
+    ],
   ],
 
   permalink: '/:year/:month/:day/:slug.html',
