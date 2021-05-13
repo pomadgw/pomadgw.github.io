@@ -17,6 +17,12 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
+    ['script', { type: 'text/x-mathjax-config' }, `
+      MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['!$','$!'], ['\\(','\\)']]}
+      });
+    `],
+    ['script', { async: true, src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
@@ -75,11 +81,16 @@ module.exports = {
     'tailwind': path.resolve(__dirname, './tailwind')
   },
 
-
   postcss: {
     plugins: [
         require('autoprefixer')({/*plugin options*/}),
         require('tailwindcss')("./tailwind.config.js"),
     ]
-  }
+  },
+
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-footnote'))
+    }
+  },
 }

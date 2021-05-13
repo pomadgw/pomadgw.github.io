@@ -16,5 +16,9 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "3.0.0",
     "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "date-fns": "^2.21.3",
+    "markdown-it-footnote": "^3.0.2"
   }
 }
