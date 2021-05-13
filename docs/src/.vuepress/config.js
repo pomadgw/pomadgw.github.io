@@ -26,9 +26,10 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ...[360, 720, 1080].map(width => [
+    ...[[360, 'max-width: 767px'], [720, 'min-width: 768px'], [1080, 'min-width: 1200px']].map(([width, media]) => [
       'link', {
         rel: 'preload',
+        media,
         href: `/img/${width}.png`,
         as: 'image',
       }
