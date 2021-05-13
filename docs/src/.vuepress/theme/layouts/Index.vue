@@ -22,10 +22,7 @@ export default {
   },
   computed: {
     pages() {
-      return this.$site
-        .pages
-        .filter(page => page.frontmatter?.date)
-        .sort((a, b) => parseISO(b.frontmatter?.date) - parseISO(a.frontmatter?.date))
+      return this.$pagination._matchedPages
     },
   },
   methods: {

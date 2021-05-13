@@ -94,7 +94,8 @@ module.exports = {
             layout: 'Index',
             itemLayout: 'Layout',
             pagination: {
-              lengthPerPage: 2,
+              layout: 'Index',
+              lengthPerPage: 1,
             }
           },
         ],
@@ -103,11 +104,11 @@ module.exports = {
             // Unique ID of current classification
             id: 'tag',
             // Decide that the frontmatter keys will be grouped under this classification
-            keys: ['tag'],
+            keys: ['tag', 'tags'],
             // Path of the `entry page` (or `list page`)
             path: '/tag/',
             // Layout of the `entry page`
-            layout: 'Tags',
+            layout: 'TagsIndex',
             // Layout of the `scope page`
             scopeLayout: 'Tag'
           },
