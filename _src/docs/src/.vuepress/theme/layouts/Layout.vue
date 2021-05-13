@@ -10,7 +10,7 @@
       <Content itemprop="articleBody"/>
       </main>
 
-      <div class="mt-6">
+      <div v-if="$page.frontmatter.tags && $page.frontmatter.tags.length > 0" class="mt-6">
         tags:
         <a v-for="tag in $page.frontmatter.tags" :key="tag" :href="`/tag/?tag=${tag}`" class="mr-2 bg-blue-500 text-white p-1">#{{ tag }}</a>
       </div>
