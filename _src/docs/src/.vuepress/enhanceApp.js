@@ -11,9 +11,9 @@ export default ({
   siteData // site metadata
 }) => {
   // // ...apply enhancements for the site.
-  // router.addRoute({
-  //   name: 'tag',
-  //   path: '/tag',
-  //   component: () => import(/* webpackChunkName: "tag-page" */ './theme/layouts/Tags.vue')
-  // })
+  router.addRoute({
+    name: 'tag2',
+    path: '/tag2',
+    component: () => import(/* webpackChunkName: "tag-page" */ './theme/layouts/Tags.vue')
+  })
 }
