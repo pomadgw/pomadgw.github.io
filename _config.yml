@@ -18,7 +18,7 @@ timezone: Asia/Jakarta
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
 - jekyll-compass
 - jekyll-paginate
 - octopress-autoprefixer
@@ -37,14 +37,14 @@ paginate: 10
 
 paginate_path: "/blog/page/:num/"
 
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
+# highlighter: rouge
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+#   smart_quotes:   lsquo,rsquo,ldquo,rdquo
+#   syntax_highlighter_opts:
+#     block:
+#       line_numbers: true
 
 defaults:
   -
