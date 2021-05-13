@@ -15,7 +15,9 @@ jobs:
           node-version: '14'
 
       - name: Setup
-        run: yarn install
+        run:
+          - yarn install
+          - cd docs && yarn install
 
       - name: Build
         run: cd docs && yarn build
@@ -27,3 +29,4 @@ jobs:
           BRANCH: master
           FOLDER: doc/src/.vuepress/dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
