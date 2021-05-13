@@ -12,7 +12,7 @@
 
       <div v-if="$page.frontmatter.tags && $page.frontmatter.tags.length > 0" class="mt-6">
         tags:
-        <a v-for="tag in $page.frontmatter.tags" :key="tag" :href="`/tag/?tag=${tag}`"><Tag>#{{ tag }}</Tag></a>
+        <a v-for="tag in $page.frontmatter.tags" :key="tag" :href="`/tag/${tag}`"><Tag>{{ tag }}</Tag></a>
       </div>
     </article>
   </Container>
