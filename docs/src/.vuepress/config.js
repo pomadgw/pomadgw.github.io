@@ -92,9 +92,6 @@ module.exports = {
             // Path of the `entry page` (or `list page`)
             path: '/',
             itemLayout: 'Layout',
-            pagination: {
-              lengthPerPage: 1,
-            }
           },
         ],
         frontmatters: [

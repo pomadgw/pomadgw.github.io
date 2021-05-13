@@ -6,6 +6,12 @@
         <h1 class="font-bold text-3xl">
           <a :href="page.path">{{ page.title }}</a>
         </h1>
+
+        <template v-if="page.excerpt">
+          <div v-html="page.excerpt" class="mt-3" />
+
+          <a :href="page.path" class="mt-3 block">more...</a>
+        </template>
       </div>
     </div>
 
