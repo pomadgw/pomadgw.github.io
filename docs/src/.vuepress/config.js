@@ -93,6 +93,7 @@ module.exports = {
             // Path of the `entry page` (or `list page`)
             path: '/',
             itemLayout: 'Layout',
+            itemPermalink: '/:year/:month/:day/:slug.html',
           },
         ],
         frontmatters: [
