@@ -18,3 +18,12 @@ and particularly with Vue framework, why not recreate the blog?
 
 This new blog is using [Vuepress](https://vuepress.vuejs.org/). This site is pretty much
 "under (eternal) construction", where I will make a little tweak whenever I want.
+
+By the way, a lot of thing has changed. Now, I already entered the second year of working
+remotely from home. Why? You know, [a certain virus has spread throughout the world](https://en.wikipedia.org/wiki/COVID-19_pandemic).
+I honestly miss going outside, riding the train. By well, it cannot be helped.
+
+Anyway, I want to try writing here, probably at least once a month. I am always too shy to share anything,
+but I think that need to change.
+
+Anyway, hello again.
