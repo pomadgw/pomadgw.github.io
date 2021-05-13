@@ -91,10 +91,8 @@ module.exports = {
             dirname: '_posts',
             // Path of the `entry page` (or `list page`)
             path: '/',
-            layout: 'Index',
             itemLayout: 'Layout',
             pagination: {
-              layout: 'Index',
               lengthPerPage: 1,
             }
           },

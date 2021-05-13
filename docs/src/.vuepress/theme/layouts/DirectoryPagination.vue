@@ -8,21 +8,25 @@
         </h1>
       </div>
     </div>
+
+    <Pagination />
   </Container>
 </template>
 <script>
 import parseISO from 'date-fns/parseISO'
 import format from 'date-fns/format'
 import Container from '../components/Container'
+import Pagination from '../components/Pagination'
 
 export default {
-  name: 'Home',
+  name: 'DirectoryPagination',
   components: {
-    Container
+    Container,
+    Pagination
   },
   computed: {
     pages() {
-      return this.$pagination._matchedPages
+      return this.$pagination.pages
     },
   },
   methods: {
