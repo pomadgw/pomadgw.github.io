@@ -15,9 +15,9 @@ jobs:
           node-version: '14'
 
       - name: Setup
-        run:
-          - yarn install
-          - cd docs && yarn install
+        run: |
+          yarn install
+          cd docs && yarn install
 
       - name: Build
         run: cd docs && yarn build
