@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+blockquote
+  border-left 8px solid #aaa
+  margin-left 20px
+  padding-left 20px
+  margin-top 12px
+  margin-bottom 12px
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #dde;
+}
+
+a {
+  @apply text-blue-600;
+}
+
+p {
+  @apply mb-2;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+.footnotes-sep {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.footnotes-list {
+  @apply text-sm;
+}
+
+@media (max-width: 991px) {
+    .bg-header-intro-img {
+        background-image: url(/img/360.png)
+    }
+}
+
+@media (min-width: 768px) {
+    .bg-header-intro-img {
+        background-image: url(/img/720.png)
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg-header-intro-img {
+        background-image: url(/img/1080.png)
+    }
+}
