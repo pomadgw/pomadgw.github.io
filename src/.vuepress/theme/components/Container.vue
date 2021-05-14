@@ -18,8 +18,8 @@ export default {
   },
   computed: {
     customImage() {
-      if (this.$frontmatter.main_image) {
-        return `background-image: url(${this.$frontmatter.main_image})`
+      if (this.$frontmatter.image) {
+        return `background-image: url(${this.$frontmatter.image})`
       }
 
       return ''

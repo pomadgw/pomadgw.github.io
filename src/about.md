@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about-me/
-main_image: /img/Me.jpg
+image: /img/Me.jpg
 show_on_navbar: true
 ---
 

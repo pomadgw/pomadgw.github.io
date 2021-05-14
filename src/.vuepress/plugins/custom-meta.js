@@ -67,6 +67,7 @@ module.exports = (options = {}, ctx) => ({
     frontmatter.meta = []
 
     const title = frontmatter.title ?? $page.title ?? null
+
     if (title) {
       frontmatter.meta.push({
         name: 'title',
@@ -106,6 +107,32 @@ module.exports = (options = {}, ctx) => ({
         content: canonicalUrl
       })
     }
+
+    const image = createUrl(frontmatter.image ?? '/img/720.png', ctx.siteConfig.themeConfig.domain)
+    const getMime = (url) => {
+      const result = /.+\.(jpg|png|webp|gif|jpeg)$/.exec(url)
+      if (result) {
+        if (result[1] === 'jpg') return 'image/jpeg'
+        return `image/${result[1]}`
+      }
+
+      return null
+    }
+
+    frontmatter.meta.push({
+      property: 'og:image',
+      content: image
+    })
+
+    frontmatter.meta.push({
+      property: 'og:image:type',
+      content: getMime(image)
+    })
+
+    frontmatter.meta.push({
+      property: 'og:image:alt',
+      content: title ?? ''
+    })
 
     if (isArticle(path)) {
       const published = frontmatter.date
