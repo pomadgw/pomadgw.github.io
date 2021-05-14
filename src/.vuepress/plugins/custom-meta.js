@@ -52,7 +52,7 @@ module.exports = (options = {}, ctx) => ({
           ? frontmatter.image.startsWith('http')
             ? frontmatter.image
             : ctx.siteConfig.themeConfig.domain + frontmatter.image
-          : null,
+          : `${ctx.siteConfig.themeConfig.domain}/img/header.png`,
       type: meta_isArticle(path) ? 'article' : 'website',
       siteName: ctx.siteConfig.title || null,
       siteLogo: ctx.siteConfig.themeConfig.domain + ctx.siteConfig.themeConfig.defaultImage,
