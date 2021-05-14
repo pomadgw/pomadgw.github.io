@@ -42,7 +42,13 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    domain: 'https://the.pomadgw.xyz'
+    domain: 'https://the.pomadgw.xyz',
+    personalInfo: {
+      name: 'Rahadian Yusuf',
+      social: [
+        { title: 'Twitter', account: 'pomadgw' }
+      ]
+    }
   },
 
   /**
