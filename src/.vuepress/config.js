@@ -62,8 +62,15 @@ module.exports = {
             dirname: '_posts',
             // Path of the `entry page` (or `list page`)
             path: '/',
+            title: '',
             itemLayout: 'Layout',
             itemPermalink: '/:year/:month/:day/:slug.html',
+            pagination: {
+              lengthPerPage: 1,
+              getPaginationPageTitle (pageNumber) {
+                return `Page ${pageNumber}`
+              }
+            }
           },
         ],
         frontmatters: [
