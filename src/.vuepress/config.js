@@ -23,7 +23,7 @@ module.exports = {
       });
     `],
     ['script', { async: true, src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#dde' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ...[[360, 'max-width: 767px'], [720, 'min-width: 768px'], [1080, 'min-width: 1200px']].map(([width, media]) => [
@@ -42,36 +42,12 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
-    ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
+    domain: 'https://the.pomadgw.xyz',
+    personalInfo: {
+      name: 'Rahadian Yusuf',
+      social: [
+        { title: 'Twitter', account: 'pomadgw' }
+      ]
     }
   },
 
@@ -92,8 +68,14 @@ module.exports = {
             dirname: '_posts',
             // Path of the `entry page` (or `list page`)
             path: '/',
+            title: '',
             itemLayout: 'Layout',
             itemPermalink: '/:year/:month/:day/:slug.html',
+            pagination: {
+              getPaginationPageTitle (pageNumber) {
+                return `Page ${pageNumber}`
+              }
+            }
           },
         ],
         frontmatters: [
@@ -115,6 +97,7 @@ module.exports = {
         },
       }
     ],
+    require(path.resolve(__dirname, './plugins/custom-meta.js')),
   ],
 
   permalink: '/:year/:month/:day/:slug.html',

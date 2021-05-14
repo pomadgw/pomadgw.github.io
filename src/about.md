@@ -1,8 +1,9 @@
 ---
 title: About
 permalink: /about-me/
-main_image: /img/Me.jpg
+image: /img/Me.jpg
 show_on_navbar: true
+pageAbout: true
 ---
 
 This is the blog by Rian (aka pomadgw, that's me!), a software engineer working as

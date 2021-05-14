@@ -1,6 +1,6 @@
 <template>
-  <Container>
-    <article class="p-12 pt-6 pb-12" itemscope itemtype="http://schema.org/BlogPosting">
+  <Container aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
+    <article itemprop="blogPost" class="p-12 pt-6 pb-12" itemscope itemtype="http://schema.org/BlogPosting">
       <header class="text-center mb-12">
         <h1 itemprop="name headline" class="font-bold text-3xl">{{ $page.title }}</h1>
         <time v-if="$page.frontmatter.date" :datetime="$page.frontmatter.date" itemprop="datePublished" class="mt-6 block text-xl">
@@ -8,7 +8,6 @@
         </time>
       </header>
       <Content itemprop="articleBody"/>
-      </main>
 
       <div v-if="$page.frontmatter.tags && $page.frontmatter.tags.length > 0" class="mt-6">
         tags:
