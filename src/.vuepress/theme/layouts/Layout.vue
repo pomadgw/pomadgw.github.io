@@ -7,7 +7,8 @@
           {{ year }}/{{ month }}/{{ date }}
         </time>
       </header>
-      <Content itemprop="articleBody"/>
+      <main aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
+        <Content itemprop="articleBody"/>
       </main>
 
       <div v-if="$page.frontmatter.tags && $page.frontmatter.tags.length > 0" class="mt-6">
