@@ -108,7 +108,7 @@ module.exports = (options = {}, ctx) => ({
       })
     }
 
-    const image = createUrl(frontmatter.image ?? '/img/720.png', ctx.siteConfig.themeConfig.domain)
+    const image = createUrl(frontmatter.image ?? '/img/header.png', ctx.siteConfig.themeConfig.domain)
     const getMime = (url) => {
       const result = /.+\.(jpg|png|webp|gif|jpeg)$/.exec(url)
       if (result) {
