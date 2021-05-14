@@ -18,6 +18,7 @@ module.exports = (options = {}, ctx) => ({
     const date = frontmatter.date ? dayjs(frontmatter.date) : (result ? new Date(Number(result[1]), Number(result[2]) - 1, Number(result[3]), 0, 0, 0) : null)
 
     let permalink = frontmatter.permalink
+    console.log({ permalink })
 
     if (result) {
       const slug = result[4]
@@ -46,7 +47,7 @@ module.exports = (options = {}, ctx) => ({
           ? frontmatter.canonicalUrl.startsWith('http')
             ? frontmatter.canonicalUrl
             : ctx.siteConfig.themeConfig.domain + frontmatter.canonicalUrl
-          : ctx.siteConfig.themeConfig.domain + permalink,
+          : (permalink ? ctx.siteConfig.themeConfig.domain + permalink : null),
       image:
         frontmatter.image && typeof frontmatter.image === 'string'
           ? frontmatter.image.startsWith('http')
