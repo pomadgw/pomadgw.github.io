@@ -66,7 +66,6 @@ module.exports = {
             itemLayout: 'Layout',
             itemPermalink: '/:year/:month/:day/:slug.html',
             pagination: {
-              lengthPerPage: 1,
               getPaginationPageTitle (pageNumber) {
                 return `Page ${pageNumber}`
               }
