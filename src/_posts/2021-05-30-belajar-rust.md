@@ -19,7 +19,7 @@ di sisi *sofware engineering*.
 <!-- more -->
 
 Di beberapa bahasa pemrograman ini ada satu yang mulai naik pamor karena
-berpotensi menghapus jenis *bug* yang sering muncul in many applications. Bahasa itu bernama **Rust**
+berpotensi menghapus jenis *bug* yang sering muncul di banyak aplikasi. Bahasa itu bernama **Rust**
 (dari nama jenis jamur, bukan karat). Bahasa ini  awalnya dikembangkan
 oleh Mozilla tapi sekarang sudah dialihkan ke Rust Foundation.
 Anggota Rust Foundation (selain Mozilla) termasuk Microsoft, Google, dan Facebook[^1].
@@ -33,7 +33,7 @@ Rust memiliki fitur yang cukup unik, yaitu [*ownership*](https://doc.rust-lang.o
 Intinya suatu value hanya dimiliki oleh satu dan *hanya* satu variabel.
 Hal ini memungkinkan Rust untuk mengetahui kapan alokasi memori diperlukan dan
 perlu dilepas tanpa secara eksplisit dikode maupun tanpa bantuan GC. Dengan konsep ini,
-Rust terhindari kita dari bug-bug terkait alokasi memori seperti *memory leak*
+Rust membuat kita terhindar dari *bug-bug* terkait alokasi memori seperti *memory leak*
 dengan membuatnya menjadi *compile error* ketimbang *runtime error*.
 
 ## Kode dalam Rust?
