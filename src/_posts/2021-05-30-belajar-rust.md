@@ -14,7 +14,7 @@ bertemu dengan suatu *framework* baru atau malah bahasa pemrograman
 baru. Iyap, *bahasa pemrograman*, yang dibuat karena seseorang atau suatu organisasi
 tidak puas dengan bahasa-bahasa yang sudah ada sekarang ini yang dianggap
 masih kurang cukup untuk membantu menyelesaikan masalah
-di sisi *sofware engineering*.
+di sisi *software engineering*.
 
 <!-- more -->
 
@@ -28,7 +28,7 @@ menjadikannya salah satu bahasa pemrograman penting.
 
 ## Alasan Rust menjadi populer?
 
-Kenapa Rust jadi punya banyak *backing* dari perusahaan-perusahaan besar?
+Kenapa Rust jadi punya banyak *backing* dari perusahaan-perusahaan teknologi besar?
 Rust memiliki fitur yang cukup unik, yaitu [*ownership*](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html).
 Intinya suatu value hanya dimiliki oleh satu dan *hanya* satu variabel.
 Hal ini memungkinkan Rust untuk mengetahui kapan alokasi memori diperlukan dan
