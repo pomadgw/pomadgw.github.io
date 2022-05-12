@@ -26,7 +26,7 @@ module.exports = {
           tex2jax: {inlineMath: [['!$','$!'], ['\\(','\\)']]}
       });
     `],
-    ['script', { async: true, src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' }],
+    ['script', { defer: true, async: true, src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' }],
     ['meta', { name: 'theme-color', content: '#dde' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
