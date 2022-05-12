@@ -123,6 +123,10 @@ module.exports = (options = {}, ctx) => ({
     }
 
     let meta_dynamicMeta = [
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
       // General meta tags
       { name: 'description', content: metadata.description },
       {
