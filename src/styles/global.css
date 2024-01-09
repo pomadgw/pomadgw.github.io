@@ -16,21 +16,21 @@
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 body {
-  font-family: "Atkinson", sans-serif;
+  font-family: 'Atkinson', sans-serif;
   background-color: #dde;
 }
 @media (max-width: 767px) {
@@ -49,6 +49,14 @@ body {
   .bg-header-intro-img {
     background-image: url(/img/1080.png);
   }
+}
+
+.prose a {
+  @apply text-blue-600 no-underline;
+}
+
+.prose a:hover {
+  @apply text-blue-700 underline;
 }
 
 .sr-only {

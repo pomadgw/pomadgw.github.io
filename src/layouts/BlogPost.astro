@@ -7,8 +7,7 @@ import BlogFooter from '../components/BlogFooter.vue'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, author, description, pubDate, updatedDate, heroImage } =
-  Astro.props
+const { title, description, pubDate, heroImage } = Astro.props
 ---
 
 <html lang='en'>
@@ -45,7 +44,7 @@ const { title, author, description, pubDate, updatedDate, heroImage } =
             {format(pubDate, 'yyyy/MM/dd')}
           </time>
         </header>
-        <div class='w-full prose !max-w-none'>
+        <div class='w-full prose !max-w-[80ch] m-auto'>
           <slot />
         </div>
       </article>
