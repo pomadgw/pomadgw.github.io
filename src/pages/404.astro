@@ -1,0 +1,45 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+import BlogFooter from '../components/BlogFooter.vue'
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main class='max-w-screen-xl m-auto bg-white'>
+      <section class='text-center p-12 flex flex-col items-center'>
+        <h1 class='text-3xl'>One After 303 <small>aka 404</small></h1>
+
+        <h2 class='text-xl'>Nothing is real (here).</h2>
+        <div class='flow-text'>
+          <p>
+            You has hit wrong page, which does not exists.
+            <a class='text-blue-500 hover:text-blue-700' href='/'
+              >Back to home</a
+            >
+          </p>
+        </div>
+      </section>
+      <pre
+        class='hidden'>
+    <!--
+
+        And please call the adventurers from Japan
+        to secure your treasures, because I sense
+        that a ninja organization and monsters and
+        evil civilization will steal your precious
+        treasures. Oh, and ask angels too! Because
+        Mr. Akashi will be pleasured for their helps.
+
+        == EXPLOSION 404 POWER ==
+
+    -->
+    </pre>
+      <BlogFooter />
+    </main>
+  </body>
+</html>
