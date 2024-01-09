@@ -4,6 +4,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { format } from 'date-fns';
+import BlogFooter from '../components/BlogFooter.vue';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,74 +15,25 @@ const { title, author, description, pubDate, updatedDate, heroImage } = Astro.pr
 <html lang="en">
   <head>
     <BaseHead title={title} description={description ?? ''} />
-    <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
-      }
-      .hero-image {
-        width: 100%;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
   </head>
 
   <body>
-    <Header />
-    <main>
-      <article>
-        <div class="hero-image">
-          {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-        </div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            {author && <div class="author">By {author}</div>}
-            <hr />
-          </div>
+    <main class="max-w-screen-xl m-auto bg-white" aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
+      <Header />
+      <div style={heroImage && `background-image: url(${heroImage})`} class="bg-cover bg-center bg-header-intro-img h-96"></div>
+      <article itemprop="blogPost" class="flex flex-col p-12 pt-6 pb-12" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="text-center mb-12">
+          <h1 itemprop="name headline" class="font-bold text-3xl">{ title }</h1>
+          <time datetime={pubDate.toISOString()} itemprop="datePublished" class="mt-6 block text-xl">
+            {format(pubDate, 'yyyy/MM/dd')}
+          </time>
+        </header>
+        <div class="w-full prose !max-w-none">
           <slot />
         </div>
       </article>
+
+      <BlogFooter />
     </main>
-    <Footer />
   </body>
 </html>
