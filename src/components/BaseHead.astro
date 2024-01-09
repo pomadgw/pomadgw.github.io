@@ -74,3 +74,25 @@ const { title, description, image = '/img/header.png' } = Astro.props
 <meta property='twitter:title' content={title} />
 <meta property='twitter:description' content={description} />
 <meta property='twitter:image' content={new URL(image, Astro.url)} />
+
+<meta name='theme-color' content='#dde' />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black' />
+
+<script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ['!$', '$!'],
+        ['(', ')']
+      ]
+    }
+  })
+</script>
+<script
+  defer='true'
+  async='true'
+  src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script>
+<link rel='preload' media='max-width: 767px' href='/img/360.png' as='image' />
+<link rel='preload' media='min-width: 768px' href='/img/720.png' as='image' />
+<link rel='preload' media='min-width: 1200px' href='/img/1080.png' as='image' />
