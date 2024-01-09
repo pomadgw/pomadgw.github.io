@@ -1,6 +1,6 @@
 ---
-title:  "Hello Again"
-date:   2021-05-14T11:00:00+0700
+title: "Hello Again"
+pubDate: 2021-05-14T11:00:00+0700
 author: Rahadian Yusuf
 description: Post a post again after a long time!
 ---
