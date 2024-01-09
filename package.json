@@ -1,32 +1,45 @@
 {
-  "name": "pomadgw.github.io",
+  "name": "pomadgw-blog",
+  "type": "module",
   "version": "0.0.1",
-  "description": "pomadgw&#39;s blog",
-  "main": "index.js",
-  "authors": {
-    "name": "Rahadian Yusuf",
-    "email": "rahadian.y@gmail.com"
-  },
-  "repository": "https://github.com/pomadgw/pomadgw.github.io/pomadgw.github.io",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "3.0.0",
-    "@vuepress/plugin-blog": "^1.9.4",
-    "postcss": "^8.2.15",
-    "postcss-loader": "^5.2.0",
-    "tailwindcss": "^2.1.2",
-    "vuepress": "^1.5.3"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,vue,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,vue,astro}\""
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
-    "date-fns": "^2.21.3",
-    "markdown-it-footnote": "^3.0.2"
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.0.3",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.0.8",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.5",
+    "astro": "^4.1.1",
+    "date-fns": "^3.1.0",
+    "tailwindcss": "^3.4.1",
+    "vue": "^3.4.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-astro": "^0.31.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "prettier": "^3.1.1",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.12.3",
+    "typescript": "*"
   }
 }

@@ -1,0 +1,55 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import { format } from 'date-fns'
+import BlogFooter from '../components/BlogFooter.vue'
+
+type Props = CollectionEntry<'blog'>['data']
+
+const { title, description, pubDate, heroImage } = Astro.props
+---
+
+<html lang='en'>
+  <head>
+    <BaseHead title={title} description={description ?? ''} />
+  </head>
+
+  <body>
+    <main
+      class='max-w-screen-xl m-auto bg-white'
+      aria-label='Main content'
+      itemscope
+      itemtype='https://schema.org/Blog'
+    >
+      <Header />
+      <div
+        style={heroImage != null ? `background-image: url(${heroImage})` : ''}
+        class='bg-cover bg-center bg-header-intro-img h-96'
+      >
+      </div>
+      <article
+        itemprop='blogPost'
+        class='flex flex-col p-12 pt-6 pb-12'
+        itemscope
+        itemtype='http://schema.org/BlogPosting'
+      >
+        <header class='text-center mb-12'>
+          <h1 itemprop='name headline' class='font-bold text-3xl'>{title}</h1>
+          <time
+            datetime={pubDate.toISOString()}
+            itemprop='datePublished'
+            class='mt-6 block text-xl'
+          >
+            {format(pubDate, 'yyyy/MM/dd')}
+          </time>
+        </header>
+        <div class='w-full prose !max-w-[80ch] m-auto'>
+          <slot />
+        </div>
+      </article>
+
+      <BlogFooter />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+---
+import BlogNavbar from './BlogNavbar.vue'
+
+const { pathname } = Astro.url
+---
+
+<header>
+  <BlogNavbar currentPage={pathname} />
+</header>
