@@ -1,28 +1,46 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  extends: 'standard-with-typescript',
-  overrides: [
+  "extends": [
+    "standard-with-typescript",
+    "plugin:vue/vue3-essential"
+  ],
+  "overrides": [
     {
-      env: {
-        node: true
+      "env": {
+        "node": true
       },
-      extends: ['plugin:@typescript-eslint/disable-type-checked'],
-      files: [
-        '.eslintrc.{js,cjs}'
+      "files": [
+        ".eslintrc.{js,cjs}",
+        "prettier.config.cjs"
       ],
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    },
+    {
+      extends: ["plugin:astro/recommended"],
+      files: ['*.astro'],
+      parser: 'astro-eslint-parser',
       parserOptions: {
-        sourceType: 'script'
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro']
+      },
+      rules: {
+        // override/add rules settings here, such as:
+        // "astro/no-set-html-directive": "error"
       }
     }
   ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off'
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
   }
 }

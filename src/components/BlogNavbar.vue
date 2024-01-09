@@ -16,20 +16,20 @@
   </nav>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
-import { SITE_TITLE } from "../consts";
+import { ref } from 'vue'
+import { SITE_TITLE } from '../consts'
 
 defineProps({
   currentPage: {
     type: String,
-    required: true,
-  },
-});
+    required: true
+  }
+})
 
 const pages = ref([
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-]);
+  { title: 'Home', path: '/' },
+  { title: 'About', path: '/about' }
+])
 
 // export default {
 //   computed: {

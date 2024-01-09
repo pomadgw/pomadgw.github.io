@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,vue,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,vue,astro}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -27,11 +28,18 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "eslint": "^8.0.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
     "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-astro": "^0.31.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
-    "typescript": "^5.3.3"
+    "eslint-plugin-vue": "^9.19.2",
+    "prettier": "^3.1.1",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.12.3",
+    "typescript": "*"
   }
 }
