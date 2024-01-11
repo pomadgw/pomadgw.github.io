@@ -2,13 +2,14 @@
 import type { CollectionEntry } from 'astro:content'
 import { format } from 'date-fns'
 import Base from './BaseLayout.astro'
+import { SITE_TITLE } from '../consts'
 
 type Props = CollectionEntry<'blog'>['data']
 
 const { title, description, pubDate, heroImage } = Astro.props
 ---
 
-<Base title={title} description={description ?? ''}>
+<Base title={`${title} - ${SITE_TITLE}`} description={description ?? ''}>
   <main
     class='max-w-screen-xl m-auto bg-white'
     aria-label='Main content'
