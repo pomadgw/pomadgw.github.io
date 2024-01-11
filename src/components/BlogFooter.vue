@@ -21,6 +21,9 @@
       </div>
     </div>
 
-    &copy; 2016 - 2024 pomadgw
+    &copy; 2016 - {{ thisYear }} pomadgw
   </footer>
 </template>
+<script setup lang="ts">
+const thisYear = new Date().getFullYear()
+</script>
