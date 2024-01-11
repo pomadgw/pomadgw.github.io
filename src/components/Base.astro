@@ -1,0 +1,27 @@
+---
+import BaseHead from './BaseHead.astro'
+import BlogFooter from './BlogFooter.vue'
+import Header from './Header.astro'
+
+type Props = {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body>
+    <div class='max-w-screen-xl m-auto bg-white'>
+      <Header />
+      <slot />
+      <BlogFooter />
+    </div>
+  </body>
+</html>
