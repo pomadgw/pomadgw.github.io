@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-center px-12 pb-12 mb-12">
+  <footer class="text-center px-12 pb-12 mb-12 dark:text-gray-300">
     <div class="mb-6 flex justify-evenly print:hidden">
       <div class="flex gap-2 items-center">
         <span class="select-none">𝕏</span>

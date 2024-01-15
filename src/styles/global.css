@@ -31,7 +31,8 @@
 }
 body {
   font-family: 'Atkinson', sans-serif;
-  background-color: #dde;
+
+  @apply bg-[#dde] dark:bg-gray-800;
 }
 @media (max-width: 767px) {
   .bg-header-intro-img {
@@ -52,11 +53,24 @@ body {
 }
 
 .prose a {
-  @apply text-blue-600 no-underline;
+  @apply text-blue-600 dark:text-blue-300 no-underline;
 }
 
 .prose a:hover {
-  @apply text-blue-700 underline;
+  @apply text-blue-700 dark:text-blue-500 underline;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose code,
+.prose pre,
+.prose strong,
+.prose blockquote {
+  @apply dark:text-gray-300;
 }
 
 .sr-only {

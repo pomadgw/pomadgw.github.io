@@ -1,7 +1,9 @@
 <template>
-  <nav class="nav flex px-12 py-6">
+  <nav
+    class="nav flex px-12 py-6 text-black dark:bg-gray-700 dark:text-gray-300"
+  >
     <div class="nav-header flex-1">
-      <a href="/" class="text-xl text-black">{{ SITE_TITLE }}</a>
+      <a href="/" class="text-xl">{{ SITE_TITLE }}</a>
     </div>
     <div class="nav-content flex">
       <div
@@ -10,7 +12,7 @@
         :class="{ 'font-bold': path === currentPage }"
         class="first:ml-0 ml-6"
       >
-        <a :href="path" class="text-gray-600 hover:underline">{{ title }}</a>
+        <a :href="path" class="text-gray-400 hover:underline">{{ title }}</a>
       </div>
     </div>
   </nav>

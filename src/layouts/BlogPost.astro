@@ -11,7 +11,7 @@ const { title, description, pubDate, heroImage } = Astro.props
 
 <Base title={`${title} - ${SITE_TITLE}`} description={description ?? ''}>
   <main
-    class='max-w-screen-xl m-auto bg-white'
+    class='max-w-screen-xl m-auto'
     aria-label='Main content'
     itemscope
     itemtype='https://schema.org/Blog'
@@ -27,7 +27,7 @@ const { title, description, pubDate, heroImage } = Astro.props
       itemscope
       itemtype='http://schema.org/BlogPosting'
     >
-      <header class='text-center mb-12'>
+      <header class='text-center mb-12 dark:text-gray-300'>
         <h1 itemprop='name headline' class='font-bold text-3xl'>{title}</h1>
         <time
           datetime={pubDate.toISOString()}
@@ -37,7 +37,7 @@ const { title, description, pubDate, heroImage } = Astro.props
           {format(pubDate, 'yyyy/MM/dd')}
         </time>
       </header>
-      <div class='w-full prose !max-w-[80ch] m-auto'>
+      <div class='w-full prose !max-w-[80ch] m-auto dark:text-gray-300'>
         <slot />
       </div>
     </article>
