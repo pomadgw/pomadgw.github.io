@@ -18,7 +18,7 @@ const { title, description, pubDate, heroImage } = Astro.props
   >
     <div
       style={heroImage != null ? `background-image: url(${heroImage})` : ''}
-      class='bg-cover bg-center bg-header-intro-img h-96'
+      class='print:hidden bg-cover bg-center bg-header-intro-img h-96'
     >
     </div>
     <article
