@@ -4,8 +4,14 @@ import sitemap from '@astrojs/sitemap'
 
 import vue from '@astrojs/vue'
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://the.pomadgw.xyz',
-  integrations: [mdx(), sitemap(), vue({ appEntrypoint: '/src/pages/_app' })]
+  integrations: [mdx(), sitemap(), vue({ appEntrypoint: '/src/pages/_app' })],
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 })

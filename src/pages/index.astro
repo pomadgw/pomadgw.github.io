@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <main class='max-w-screen-xl m-auto'>
+  <main class='max-w-(--breakpoint-xl) m-auto'>
     <div
       class='bg-cover bg-center bg-header-intro-img h-96 bg-header-intro-img'
     >
