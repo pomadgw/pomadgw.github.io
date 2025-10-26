@@ -3,6 +3,10 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+//@source '../**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'
 
 :root {
   --accent: #2337ff;
@@ -12,9 +16,11 @@
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-  --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
-    0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
 }
+
 @font-face {
   font-family: 'Atkinson';
   src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -22,6 +28,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Atkinson';
   src: url('/fonts/atkinson-bold.woff') format('woff');
@@ -29,11 +36,13 @@
   font-style: normal;
   font-display: swap;
 }
+
 body {
   font-family: 'Atkinson', sans-serif;
 
   @apply bg-[#dde] dark:bg-gray-800;
 }
+
 @media (max-width: 767px) {
   .bg-header-intro-img {
     background-image: url(/img/360.png);
@@ -58,19 +67,6 @@ body {
 
 .prose a:hover {
   @apply text-blue-700 dark:text-blue-500 underline;
-}
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6,
-.prose code,
-.prose pre,
-.prose strong,
-.prose blockquote {
-  @apply dark:text-gray-300;
 }
 
 .sr-only {
